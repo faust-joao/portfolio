@@ -1,0 +1,21 @@
+/* large screens css */
+
+/* nav formatting */
+nav {
+    padding: 10px;
+}
+
+nav div {
+    justify-content: end;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    background-color: var(--link-1);
+    color: var(--bg-2);
+}
+
+/* footer formatting */
+footer {
+    padding: 20px 0;
+}

@@ -1,0 +1,109 @@
+:root {
+    --main-font-familly: 'Open Sans', sans-serif;
+    --main-bg-color: beige;
+    --secondary-bg-color: #fff;
+    --main-text-color: #1c1c1c;
+    --main-border-color: #dedede;
+    --small-spacing: 1rem;
+    --medium-spacing: 2rem;
+    --big-spacing: 3rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font-familly);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+h1 {
+    font-size: 28px;
+}
+
+header,
+form,
+footer {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--main-border-color);
+}
+
+header, footer {
+    text-align: center;
+    padding: var(--small-spacing);
+}
+
+main {
+    max-width: 920px;
+    margin: var(--medium-spacing) auto;
+    padding: 0 var(--small-spacing);
+}
+
+form {
+    padding: var(--medium-spacing);
+    border-radius: 5px;
+}
+
+form > div:last-child {
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid var(--main-border-color);
+    padding: var(--small-spacing);
+    margin-bottom: var(--small-spacing);
+}
+
+fieldset > div:not(div:last-child) {
+    margin-bottom: var(--small-spacing);
+}
+
+fieldset > div p {
+    font-weight: bold;
+}
+
+.input-block {
+    width: 100%;
+    height: 35px;
+}
+
+.label-block {
+    display: block;
+}
+
+input:not(input[type="checkbox"], input[type="radio"]),
+textarea,
+select {
+    padding: 5px;
+    margin-top: 3px;
+    background-color: transparent;
+    border: 1px solid var(--main-border-color);
+    border-radius: 3px;
+    outline-color: var(--main-text-color);
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+button {
+    background-color: #B0C4DE;
+    border: 1px solid #4682B4;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color .8s;
+}
+  
+button:hover {
+    background-color: #4682B4;
+    border-color: #4682B4;
+}

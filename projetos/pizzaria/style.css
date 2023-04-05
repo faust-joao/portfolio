@@ -1,0 +1,217 @@
+:root {
+    scroll-behavior: smooth;
+    --main-bg-color: #d3d3d3;
+    --secondary-color: #fff;
+    --main-text-color: #363636;
+    --main-border-color: #ccc;
+    --main-link-color: #4682B4;
+    --tamanho: calc(100% - 30px);
+    --imagem: url('logo.png');
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* background-image: var(--imagem); */
+    background-repeat: no-repeat;
+    width: var(--tamanho);
+    margin: auto;
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    line-height: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+section,
+nav {
+    border-bottom: 1px solid var(--main-border-color);
+    padding: 10px 50px;
+}
+
+section {
+    min-height: 50vh;
+}
+
+header {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+nav div {
+    display: inline-block;
+}
+
+a {
+    color: var(--main-link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* questao 1 */
+a:link,
+a:visited {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #9370DB;
+}
+
+/* questao 2 */
+nav>div {
+    display: inline-block;
+}
+
+/* questao 3 */
+tr:nth-child(4) {
+    display: none;
+}
+
+/* questao 4 */
+tr:nth-child(3n) {
+    background-color: #ccc;
+}
+
+/* questao 5 */
+tr:first-child {
+    background-color: #eee;
+}
+
+/* questao 6 */
+section:first-child {
+    background-color: beige;
+
+}
+
+section:nth-child(2) {
+    background-color: aliceblue;
+}
+
+section:last-child {
+    background-color: azure;
+}
+
+/* questao 7 */
+section p {
+    color: purple;
+}
+
+#sobre {
+    color: blue;
+}
+
+#produtos {
+    color: red;
+}
+
+#endereco {
+    color: pink;
+}
+
+/* questao 8 */
+tr:not(:first-child) td:nth-child(2)::before {
+    content: "R$ ";
+}
+
+/* questao 9 */
+nav div a[href*="https"] {
+    color: red;
+}
+
+/* questao 10 */
+address p:first-child::before {
+    content: "Rua ";
+}
+
+/* questao 11 */
+address p:nth-child(2)::before {
+    content: "Bairro ";
+}
+
+/* questao 12 */
+address p:last-child::after {
+    content: " Santa Catarina";
+}
+
+/* questao 13 */
+tr:not(:first-child):hover {
+    color: pink;
+}
+
+/* questao 14 */
+address,
+#endereco {
+    text-align: center;
+}
+
+/* questao 15 */
+p:last-of-type {
+    color: brown;
+}
+
+nav div a:only-child {
+    background-color: pink;
+}
+
+a {
+    transition: font-size .8s;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+/* questao 16 */
+::selection {
+    color: red;
+    background-color: black;
+}
+
+p::first-letter {
+    color: orange;
+}
+
+/*
+* 
+Para esta atividade, você não deve alterar absolutamente nada o arquivo HTML.
+
+1 - formate os links como achar mais apropriado em seus estados (link, visited, hover, active)
+2 - os links devem estar lado a lado (display:inline ou inline-block)
+3 - a pizza do cheff está em falta, esconda esta linha da tabela (display:none)
+4 - faça a tabela ser listrada com cores diferentes
+5 - a primeira linha da tabela (cabeçalho) deve ser com uma cor destaque
+6 - cada seção deve ter uma cor de fundod diferente
+7 - Títulos devem possui cores diferentes em cada seção. No entanto, os parágrafos das seções devem ser de cores iguais.
+8 - adicione "R$" nos preços das pizzas
+9 - links externos devem possuir uma cor ligeiramente diferente (começa com http)
+10 - adicione "Rua" antes do nome da rua "Maria Aparecida Barbosa"
+11 - adicione "bairro antes de "Campo Duna"
+12 - adicione "Santa Catarina" após o nome da cidade (Garopaba)
+13 - ao passar o cursor sobre cada linha da tabela, ela deve ser "iluminada" com outra cor (menos o cabeçalho). 
+	 Dica: combinação de pseudo classes
+14 - o texto do endereço deve ser centralizado
+15 - Desenvolva 3 exemplos de uso de pseudo-classes que não foram demonstradas pelo professor
+16 - Desenvolva 2 exemplos de pseudo-elementos que não foram demonstradas pelo professor
+*/

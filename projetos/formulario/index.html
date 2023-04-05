@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para envio de curriculos da empresa xxx">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Enviar Curriculo</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Envie seu curriculo aqui</h1>
+        </header>
+        <main>
+            <form method="post" autocomplete="off" target="_blank" 
+            enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Dados pessoais e contato</legend>
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required minlength="4" maxlength="60" autofocus class="input-block">
+                    </div>
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="XXX.XXX.XXX-XX" class="input-block">
+                    </div>
+                    <div>
+                        <label for="tel">Telefone</label>
+                        <input type="tel" name="tel" id="tel" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="XX XXXXX-XXXX" class="input-block">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required maxlength="255" class="input-block">
+                    </div>
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" required minlength="8" class="input-block">
+                    </div>
+                    <div>
+                        <label for="nasc" class="label-block">Nascimento</label>
+                        <input type="date" name="nasc" id="nasc" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Conhecimentos e experiências</legend>
+                    <div>
+                        <p>Quais tecnologias você domina?</p>
+                        <div>
+                            <input type="checkbox" name="tecs[]" id="php" value="php">
+                            <label for="php">PHP</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="tecs[]" id="js" value="javascript">
+                            <label for="js">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="tecs[]" id="css" value="css">
+                            <label for="css">CSS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="tecs[]" id="html" value="html">
+                            <label for="html">HTML</label>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Qual é seu nível de experiência?</p>
+                        <div>
+                            <input type="radio" name="nivel-exp" id="junior" value="junior" checked>
+                            <label for="junior">Junior</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="nivel-exp" id="pleno" value="pleno">
+                            <label for="pleno">Pleno</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="nivel-exp" id="senior" value="senior">
+                            <label for="senior">Senior</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="curriculo" class="label-block">Curriculo</label>
+                        <input type="file" name="curriculo" id="curriculo" required accept="image/*,.pdf">
+                    </div>
+                    <div>
+                        <label for="info-adicional" class="label-block">Informações adicionais</label>
+                        <textarea name="info-adicional" id="info-adicional" placeholder="Digite aqui caso necessário"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Vaga(s) de interesse e pretensão salarial</legend>
+                    <div>
+                        <label for="vaga" class="label-block">Vagas</label>
+                        <select name="vaga" id="vaga" required>
+                            <option value="" selected disabled>Escolha uma vaga</option>
+                            <option value="dev-frontend">Desenvolvedor frontend</option>
+                            <option value="dev-backend">Desenvolvedor backend</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="salario">Salário</label>
+                        <input type="number" name="salario" id="salario" required class="input-block">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>termos de uso</legend>
+                    <div>
+                        <textarea readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil libero, ratione iusto eaque fugit molestias, praesentium iure in reprehenderit animi quasi repellat magni non nam, excepturi consectetur illum aperiam quidem.</textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="check-termos" id="check-termos" required>
+                        <label for="check-termos">Aceitar termos</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <button type="submit">Enviar!</button>
+                </div>
+            </form>
+        </main>
+        <footer>&copy;Volte sempre</footer>
+    </div>
+
+</body>
+</html>

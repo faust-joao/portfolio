@@ -1,0 +1,31 @@
+/* mobile css */
+
+nav {
+    flex-direction: column;
+}
+
+nav > a {
+    display: block;
+    text-align: right;
+}
+
+nav div {
+    flex-direction: column;
+    text-align: right;
+    transform: translateX(-100%);
+    width: 100%;
+    position: absolute;
+    transition: transform 1s;
+}
+
+#nav:target div {
+    transform: translateX(0);
+}
+
+#nav:target > a {
+    display: none;
+}
+
+#nav:target #close {
+    display: block;
+}
